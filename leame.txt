@@ -1,0 +1,121 @@
+════════════════════════════════════════════════════════════════════════════════
+  SISTEMA DE GESTIÓN DE BIBLIOTECA — GUÍA DE USO
+  Aplicación GUI con Persistencia en SQLite y Soporte Técnico Sincrónico
+  
+════════════════════════════════════════════════════════════════════════════════
+
+DESCRIPCIÓN GENERAL
+───────────────────
+Aplicación de escritorio desarrollada en Python con:
+  ✓ Interfaz gráfica basada en tkinter
+  ✓ Base de datos SQLite para persistencia de datos
+  ✓ Gestión completa de libros, usuarios y préstamos
+  ✓ Generación de reportes con gráficos (matplotlib)
+  ✓ Módulo de soporte técnico sincrónico mediante sockets TCP (NUEVO)
+
+REQUISITOS
+──────────
+  • Python 3.8 o superior
+  • Librerías:
+      - tkinter  (incluido en Python)
+      - sqlite3  (incluido en Python)
+      - socket   (incluido en Python)
+      - threading (incluido en Python)
+      - matplotlib (instalar: pip install matplotlib)
+
+INSTALACIÓN DE DEPENDENCIAS
+───────────────────────────
+    pip install matplotlib
+
+ARCHIVOS INCLUIDOS
+──────────────────
+  • app.py            → Punto de entrada principal (ejecutar este archivo)
+  • gui.py            → Interfaz gráfica tkinter (incluye botón de soporte)
+  • db.py             → Gestión de base de datos SQLite
+  • reportes.py       → Generación de reportes y gráficos
+  • chat_soporte.py   → Ventana de chat GUI (módulo de soporte - NUEVO)
+  • servidor.py       → Servidor de soporte técnico con sockets (NUEVO)
+  • cliente.py        → Cliente de consola para pruebas de sockets (NUEVO)
+  • biblioteca.db     → Archivo de base de datos SQLite
+  • leame.txt         → Este archivo
+
+════════════════════════════════════════════════════════════════════════════════
+  NUEVA FUNCIONALIDAD: SOPORTE TÉCNICO SINCRÓNICO
+════════════════════════════════════════════════════════════════════════════════
+
+UBICACIÓN EN LA APLICACIÓN
+───────────────────────────
+El chat de soporte se accede desde la barra de menú principal:
+
+    Botón  →  🎧 Soporte en Línea
+
+Al pulsarlo se abre una ventana flotante de chat donde el usuario puede
+comunicarse en tiempo real con el operador de soporte técnico.
+
+CÓMO USAR EL SOPORTE SINCRÓNICO
+────────────────────────────────
+
+PASO 1 — Iniciar el servidor (operador de soporte)
+  Abra una terminal y ejecute:
+
+      python servidor.py
+
+  El servidor quedará en espera de conexiones. El operador escribe sus
+  respuestas directamente en esa consola y presiona Enter para enviarlas.
+  Escriba "salir" para cerrar la sesión con el cliente.
+
+PASO 2 — Conectar desde la aplicación (usuario)
+  1. Ejecute la aplicación principal:
+
+         python app.py
+
+  2. En la barra de menú, haga clic en  🎧 Soporte en Línea
+  3. Ingrese su NickName en el campo correspondiente
+  4. Haga clic en  Conectar
+  5. Si el servidor está activo, verá el indicador  🟢 Conectado al soporte
+  6. Escriba su mensaje y presione Enter o el botón  Enviar ➤
+
+ALTERNATIVA — Usar el cliente de consola (para pruebas)
+  También puede conectarse al servidor usando el cliente de consola:
+
+      python cliente.py
+
+  Este cliente es útil para probar la comunicación sin la interfaz gráfica.
+
+CUANDO EL SERVIDOR NO ESTÁ ACTIVO
+──────────────────────────────────
+Si intenta conectarse sin que el servidor esté corriendo, aparecerá el
+mensaje:
+
+  "⚠  El soporte no se encuentra activo en este momento.
+   Por favor, intente más tarde."
+
+La aplicación principal no se interrumpe y puede seguir usándola con
+normalidad.
+
+════════════════════════════════════════════════════════════════════════════════
+  FUNCIONALIDADES GENERALES
+════════════════════════════════════════════════════════════════════════════════
+
+📖 GESTIÓN DE LIBROS
+  • Agregar, editar y eliminar libros
+  • Ver catálogo completo con estado de disponibilidad
+
+👤 GESTIÓN DE USUARIOS
+  • Registrar, editar y desactivar usuarios
+
+📤 GESTIÓN DE PRÉSTAMOS
+  • Crear préstamos (15 días), registrar devoluciones
+  • Ver préstamos vencidos
+
+📊 REPORTES Y ESTADÍSTICAS
+  • Resumen general, géneros más prestados, préstamos vencidos (PNG)
+
+CÓMO EJECUTAR LA APLICACIÓN PRINCIPAL
+──────────────────────────────────────
+    python app.py
+
+════════════════════════════════════════════════════════════════════════════════
+Versión: 2.0 | Fecha: Junio 2026 | Estado: Production Ready
+Curso: Programación Avanzada — UNAD | Código: 202047919
+════════════════════════════════════════════════════════════════════════════════
