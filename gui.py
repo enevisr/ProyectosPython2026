@@ -41,7 +41,7 @@ class VentanaPrincipal:
         frame_header.pack(fill=tk.X, padx=10, pady=10)
 
         lbl_titulo = ttk.Label(
-            frame_header, text="📚 Sistema de Biblioteca UNAD",
+            frame_header, text="📚 Sistema de Biblioteca CEIPA",
             font=("Helvetica", 16, "bold")
         )
         lbl_titulo.pack(anchor=tk.W)

@@ -117,5 +117,5 @@ CÓMO EJECUTAR LA APLICACIÓN PRINCIPAL
 
 ════════════════════════════════════════════════════════════════════════════════
 Versión: 2.0 | Fecha: Junio 2026 | Estado: Production Ready
-Curso: Programación Avanzada — UNAD | Código: 202047919
+CEIPA
 ════════════════════════════════════════════════════════════════════════════════
