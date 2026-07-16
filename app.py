@@ -10,7 +10,7 @@ from gui import VentanaPrincipal
 
 
 def main():
-    """Punto de entrada principal de la aplicación."""
+    """Punto de entrada principal de la aplicación. Con los detalles"""
     # Crear instancia de base de datos
     db = BaseDatos("biblioteca.db")
 
