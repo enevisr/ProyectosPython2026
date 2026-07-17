@@ -18,7 +18,7 @@ import threading
 
 # ── Configuración ──────────────────────────────────────────────────────────────
 HOST = "127.0.0.1"   # Dirección local (localhost)
-PORT = 65432         # Puerto de escucha
+PORT = 65433         # Puerto de escucha
 BUFFER = 4096        # Tamaño del buffer de recepción
 
 
@@ -90,7 +90,7 @@ def iniciar_servidor() -> None:
             servidor.bind((HOST, PORT))
             servidor.listen(5)
             print("=" * 60)
-            print("  SOPORTE TÉCNICO SINCRÓNICO — SERVIDOR")
+            print("  SOPORTE TÉCNICO SINCRÓNICO — SERVIDOR CEIPA")
             print("=" * 60)
             print(f"  Escuchando en {HOST}:{PORT}")
             print("  Esperando conexión de un usuario...")
