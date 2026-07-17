@@ -1,7 +1,7 @@
 ════════════════════════════════════════════════════════════════════════════════
   SISTEMA DE GESTIÓN DE BIBLIOTECA — GUÍA DE USO
   Aplicación GUI con Persistencia en SQLite y Soporte Técnico Sincrónico
-  
+  CEIPA 2026
 ════════════════════════════════════════════════════════════════════════════════
 
 DESCRIPCIÓN GENERAL
